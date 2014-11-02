@@ -178,7 +178,25 @@ optional `callback` is called. Not sure when to use `callback`.
 
 ## [Guides: Multiple Components](http://facebook.github.io/react/docs/multiple-components.html)
 
-__TODO__
++ Composability is one of React's finest features.
++ React helps achieve true separation of concerns: allow you to separate concerns of your app
+however you please, expressing UI in way that best fits domain.
++ Owner sets props of other components.
++ Component cannot mutate it's `props`. Owner controls props.
++ owner-ownee !== parent-child.
++ Just because it is parent, doesn't mean it is owner.
++ The owner of a component is the one who instantiates the component.
++ Child reconciliation: process of updating the DOM.
++ Two paragraphs, rather than destroying first, it is updated to match second and second is destroyed.
++ Hide rather than destroy if state needs to live across render passes.
++ Use `key` prop on children that get shuffled around, to preserve state and identity across render
+passes.
++ Set `key` on component, not root element of component.
++ Children can be keyed by passing object. Use non-numeric keys to preserve ordering (add string
+prefix if necessary).
++ Data flows from owner to owned through `props`. This is effectively one-way data binding.
++ React is already fast, but if you need faster, override `shouldComponentUpdate()` to skip subtree.
++ Be careful with `shouldComponentUpdate()` that it returns `false` only when it should.
 
 
 ## [Guides: Reusable Components](http://facebook.github.io/react/docs/reusable-components.html)
