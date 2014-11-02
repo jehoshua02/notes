@@ -444,7 +444,24 @@ hooks for custom transitions.
 
 ## [Guides: Add-Ons: Two-Way Binding Helpers](http://facebook.github.io/react/docs/two-way-binding-helpers.html)
 
-__TODO__
++ Implement two-way bindings with `ReactLink`.
++ `ReactLink` should be used cautiously.
++ Closing the data flow loop explicitly leads to easy maintenance and understandability.
++ Two-way binding: implicitly enforcing that some value is always consistent with some state.
++ `ReactLink` is used to form links from data source to `state`.
++ `ReactLink` is just a wrapper and convention around `onChange` / `setState()` pattern.
++ Without `ReactLink` you listen to `onChange` and then `setState()`.
++ With `ReactLink`: `mixins: [React.addons.LinkedStateMixin]` and `<input valueLink={this.linkState('someStateKey')} />`.
++ `LinkedStateMixin` adds `linkState()` method.
++ `linkState()` returns `ReactLink`.
++ `ReactLink` contains current value of state and a callback to change it.
++ `ReactLink` objects can be passed up and down the tree as props.
++ `ReactLink` can be used to set up two-way binding through the component heirarchy.
++ Use `checkedLink` with checkboxes, instead of `valueLink`: `<input type="checkbox" checkedLink={this.linkState('booleanValue')} />`.
++ Two sides of `ReactLink`: a) creating instance and b) using it.
++ A `valueLink` is simply a hash with `value`, set using state, and `requestChange` handler.
++ The `valueLink` prop handles `onChange` and calls `this.props.valueLink.requestChange()`.
++ The `valueLink` prop uses `this.props.valueLink.value` instead of `this.props.value`.
 
 
 ## [Guides: Add-Ons: Class Name Manipulation](http://facebook.github.io/react/docs/class-name-manipulation.html)
