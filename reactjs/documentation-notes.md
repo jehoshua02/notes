@@ -201,7 +201,19 @@ prefix if necessary).
 
 ## [Guides: Reusable Components](http://facebook.github.io/react/docs/reusable-components.html)
 
-__TODO__
++ Common design elements should be reusable components with well-defined interfaces.
++ Validate props with `propTypes`: a hash defining types for all props.
++ `React.PropTypes` has a bunch of validators.
++ Override `getDefaultProps` to set defaults for props.
++ Pass props to a child using spread: `<a {...this.props}>blah blah</a>`. Good when extending
+components in small ways.
++ Use `React.PropTypes.component` to specify only one child is allowed: `children: React.PropTypes.component.isRequired`.
++ Cross-cutting concerns: two very different components share common functionality.
++ Cross-cutting concern example: setInterval.
++ Use mixins for cross-cutting concerns.
++ Use lifecycle methods for cleanup.
++ Mixin methods do not override the same method defined in another mixin.
++ All mixin methods will be called in order listed, followed by method on component.
 
 
 ## [Guides: Transferring Props](http://facebook.github.io/react/docs/transferring-props.html)
