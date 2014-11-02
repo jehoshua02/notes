@@ -148,7 +148,7 @@ calling the callback.
 + Workaround 1: write unicode character directly in Javascript.
 + Workaround 2: `\u00b7` or `String.fromCharCode(183)`.
 + Workaround 3: Arrays with strings and JSX elements.
-+ Last Resort: `<div dangerouslySetInnerHTML={{__html: 'First &middot; Second'}} />
++ Last Resort: `<div dangerouslySetInnerHTML={{__html: 'First &middot; Second'}} />`.
 + Only HTML spec, `data-`, and `aria-` properties are rendered in HTML.
 
 
