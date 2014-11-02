@@ -602,6 +602,9 @@ some point, but what else is happening?
 + How does React compare to Polymer?
 + How does React help build "big, fast" web apps?
 + What is a "simple state machine"?
++ How long have these addons been around and how long until they will be moved into core or utility lib?
++ How many lines of code are in react.js?
++ How many public, documented methods are in React api?
 
 
 ## __TODO__ for these notes:
