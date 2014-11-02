@@ -338,7 +338,45 @@ validation. Without setting state in `onChange` it will not change.
 
 ## [Guides: Working With the Browser](http://facebook.github.io/react/docs/working-with-the-browser.html)
 
-__TODO__
++ Virtual DOM: fast in-memory representation of the DOM.
++ React diffs `render` description with virtual DOM to compute the fastest way to update the DOM.
++ Sometimes you want to interact with DOM anyway. Use `refs` and `getDOMNode()`.
++ Exception thrown when calling `getDOMNode()` before component is mounted.
++ Component Lifecycle, three main parts: Mounting, Updating, Unmounting.
++ Mounting: insert into DOM.
++ Updating: re-rendered to determine if the DOM should be updated.
++ Unmounting: remove from the DOM.
++ will and did lifecycle methods.
++ `getInitialState()` is called before a component is mounted.
++ `componentWillMount()` is invoked immediately before mounting occurs.
++ `componentDidMount()` invoked after mounting. Initialization requiring DOM nodes goes here.
++ `componentWillReceiveProps()` invoked when mounted component receives new props. Used to compare
+`this.props` and `nextProps`.
++ `shouldComponentUpdate()` invoked when a component decides changes warrant DOM update. Return
+`false` to skip updating.
++ `componentWillUpdate()` invoked before updating occurs. Cannot call `this.setState()` here.
++ `componentDidUpdate()` invoked after updating.
++ `componentWillUnmount()` invoked before component unmount and destroyed. Clean up goes here.
++ Mounted composite component methods: `getDOMNode()`, `forceUpdate()`.
++ You need [es5-shim](https://github.com/kriskowal/es5-shim) to support older browsers.
++ React uses the following from `es5-shim.js`:
+  + `Array.isArray`
+  + `Array.prototype.every`
+  + `Array.prototype.forEach`
+  + `Array.prototype.indexOf`
+  + `Array.prototype.map`
+  + `Date.now`
+  + `Function.prototype.bind`
+  + `Object.keys`
+  + `String.prototype.split`
+  + `String.prototype.trim`
++ React uses the following from `es5-sham.js`:
+  + `Object.create`
+  + `Object.freeze`
++ Unminified build of React needs [paulmillr's console-polyfill](https://github.com/paulmillr/console-polyfill):
+  + `console.*`
++ If using HTML5 elements in IE8 you'll need `html5shiv`.
++ React developers couldn't find a workaround for `onScroll` event.
 
 
 ## [Guides: Working With the Browser: More About Refs](http://facebook.github.io/react/docs/more-about-refs.html)
