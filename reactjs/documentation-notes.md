@@ -404,7 +404,12 @@ Why can't we unify?
 
 ## [Guides: Add-Ons](http://facebook.github.io/react/docs/addons.html)
 
-__TODO__
++ `React.addons`, experimental, eventually rolled into core or blessed utilities lib.
++ `TransitionGroup`, `CSSTransitionGroup`, `LinkedStateMixin`, `classSet`, `TestUtils`,
+`cloneWithProps`, `update`.
++ Unminified, development: `PureRenderMixin`, `Perf`.
++ To enable addons, use `react-with-addons.js` instead of `react.js`.
++ With npm, `require('react/addons')` instead of `require('react')`.
 
 
 ## [Guides: Add-Ons: Animation](http://facebook.github.io/react/docs/animation.html)
