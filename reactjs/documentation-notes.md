@@ -381,7 +381,16 @@ validation. Without setting state in `onChange` it will not change.
 
 ## [Guides: Working With the Browser: More About Refs](http://facebook.github.io/react/docs/more-about-refs.html)
 
-__TODO__
++ What is returned from `render()` is not the actual components. Just description.
++ Never hold on to something from `render()` and expect it to be meaningful.
++ The `ref` prop is a special prop that allows the parent to access the child through `this.refs`.
++ Only use `ref` when you can't use reactive `props` or `state`.
++ Since the ref is the component instance, any of the component methods may be called.
++ Use refs for DOM measurements.
++ Get the DOM node like this: `this.refs.myInput.getDOMNode()`.
++ Do not access refs inside `render`.
++ Never access as a property what was specified as a string: good `this.refs['myRefString']`; bad `this.refs.myRefString`.
++ Double check that state is owned by the right components before using refs.
 
 
 ## [Guides: Tooling Integration](http://facebook.github.io/react/docs/tooling-integration.html)
