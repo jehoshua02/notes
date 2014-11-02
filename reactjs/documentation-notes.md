@@ -550,11 +550,9 @@ some point, but what else is happening?
 
 ## __TODO__ for these notes:
 
-+ [ ] Add links.
 + [ ] Eliminate all __TODO__ marks.
 + [ ] More questions.
 + [ ] Move questions to separate document and answer them.
 + [ ] Take notes on all videos, talks, interviews, etc.
 + [ ] Go through [Complementary Tools](https://github.com/facebook/react/wiki/Complementary-Tools)
 + [ ] Go through [Examples](https://github.com/facebook/react/wiki/Examples)
-+ [ ] Check markdown rendering on Github.
