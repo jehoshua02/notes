@@ -240,7 +240,22 @@ something you don't want to pass.
 
 ## [Guides: Forms](http://facebook.github.io/react/docs/forms.html)
 
-__TODO__
++ Form components: `<input>`, `<textarea>`, `<option>`.
++ `value` prop supported by `<input>`, `<textarea>` components.
++ `checked` prop supported by `<input>` components of type `checkbox` or `radio`.
++ `selected` prop supported by `<option>` components.
++ Use `value` prop on `<textarea>` instead of children.
++ Form components support `onChange` prop.
++ `onChange` fires when
+  + `value` of `<input>` or `<textarea>` changes.
+  + `checked` state of `<input>` changes.
+  + `selected` state of `<option>` changes.
++ `onChange` supported on all native components and bubble up, like all DOM events.
++ Controlled Components: can't change value because it's set by prop. Good for live response or
+validation. Without setting state in `onChange` it will not change.
++ Uncontrolled Components: value starts empty. Set defaults with `defaultValue` or `defaultChecked`.
++ Controlled Components are a side effect of declarative UI.
++ Multi-select: `<select multiple={true} value={['B', 'C']}>`.
 
 
 ## [Guides: Working With the Browser](http://facebook.github.io/react/docs/working-with-the-browser.html)
