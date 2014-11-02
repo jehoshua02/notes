@@ -1,5 +1,83 @@
 # Documentation Notes
 
+__Quick Start__
+
++ [Getting Started](#quick-start-getting-started)
++ [Tutorial](#quick-start-tutorial)
++ [Thinking in React](#quick-start-thinking-in-react)
+
+__Community Resources__
+
++ [Videos (Talks, Interviews, etc)](#community-resources-videos-talks-interviews-etc)
+
+__Guides__
+
++ [Why React?](#guides-why-react)
++ [Displaying Data](#guides-displaying-data)
++ [Displaying Data: JSX in Depth](#guides-displaying-data-jsx-in-depth)
++ [Displaying Data: JSX Spread Attributes](#guides-displaying-data-jsx-spread-attributes)
++ [Displaying Data: JSX Gotchas](#guides-displaying-data-jsx-gotchas)
++ [Interactivity and Dynamic UIs](#guides-interactivity-and-dynamic-uis)
++ [Multiple Components](#guides-multiple-components)
++ [Reusable Components](#guides-reusable-components)
++ [Transferring Props](#guides-transferring-props)
++ [Forms](#guides-forms)
++ [Working With the Browser](#guides-working-with-the-browser)
++ [Working With the Browser: More About Refs](#guides-working-with-the-browser-more-about-refs)
++ [Tooling Integration](#guides-tooling-integration)
++ [Add-Ons](#guides-add-ons)
++ [Add-Ons: Animation](#guides-add-ons-animation)
++ [Add-Ons: Two-Way Binding Helpers](#guides-add-ons-two-way-binding-helpers)
++ [Add-Ons: Class Name Manipulation](#guides-add-ons-class-name-manipulation)
++ [Add-Ons: Test Utilities](#guides-add-ons-test-utilities)
++ [Add-Ons: Cloning Components](#guides-add-ons-cloning-components)
++ [Add-Ons: Immutability Helpers](#guides-add-ons-immutability-helpers)
++ [Add-Ons: PureRenderMixin](#guides-add-ons-purerendermixin)
++ [Add-Ons: Performance Tools](#guides-add-ons-performance-tools)
+
+__Reference__
+
++ [Top-Level API](#reference-top-level-api)
++ [Component API](#reference-component-api)
++ [Component Specs and Lifecycle](#reference-component-specs-and-lifecycle)
++ [Supported Tags and Attributes](#reference-supported-tags-and-attributes)
++ [Event System](#reference-event-system)
++ [DOM Differences](#reference-dom-differences)
++ [Special Non-DOM Attributes](#reference-special-non-dom-attributes)
++ [Reconciliation](#reference-reconciliation)
++ [React (Virtual) DOM Terminology](#reference-react-virtual-dom-terminology)
+
+__Flux__
+
++ [Overview](#flux-overview)
++ [TodoMVC Tutorial](#flux-todomvc-tutorial)
+
+__Tips__
+
++ [Introduction](#tips-introduction)
++ [Inline Styles](#tips-inline-styles)
++ [If-Else in JSX](#tips-if-else-in-jsx)
++ [Self-Closing Tag](#tips-self-closing-tag)
++ [Maximum Number of JSX Root Nodes](#tips-maximum-number-of-jsx-root-nodes)
++ [Shorthand for Specifying Pixel Values in style props](#tips-shorthand-for-specifying-pixel-values-in-style-props)
++ [Type of the Children props](#tips-type-of-the-children-props)
++ [Value of null for Controlled Input](#tips-value-of-null-for-controlled-input)
++ [componentWillReceiveProps Not Triggered After Mounting](#tips-componentwillreceiveprops-not-triggered-after-mounting)
++ [Props in getInitialState Is an Anti-Pattern](#tips-props-in-getinitialstate-is-an-anti-pattern)
++ [DOM Event Listeners in a Component](#tips-dom-event-listeners-in-a-component)
++ [Load Initial Data via AJAX](#tips-load-initial-data-via-ajax)
++ [False in JSX](#tips-false-in-jsx)
++ [Communicate Between Components](#tips-communicate-between-components)
++ [Expose Component Functions](#tips-expose-component-functions)
++ [References to Components](#tips-references-to-components)
++ [this.props.children undefined](#tips-thispropschildren-undefined)
+
+__Other__
+
++ [Questions:](#questions)
++ [TODO for these notes:](#todo-for-these-notes)
+
+
 ## [Quick Start: Getting Started](http://facebook.github.io/react/docs/getting-started.html)
 
 + React uses jsx syntax, an XML enhanced form of javascript.
