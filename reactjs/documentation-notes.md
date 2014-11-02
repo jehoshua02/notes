@@ -395,7 +395,11 @@ validation. Without setting state in `onChange` it will not change.
 
 ## [Guides: Tooling Integration](http://facebook.github.io/react/docs/tooling-integration.html)
 
-__TODO__
++ "Every project uses a different system for building and deploying JavaScript". That's too bad.
+Why can't we unify?
++ CDN hosted version of React exports `React` global and works with CommonJS and AMD.
++ Building from master provides tree of CommonJS modules.
++ `npm install -g react-tools; jsx --watch src/ build/` (But I'd use `gulp-react` instead, which uses `react-tools`.)
 
 
 ## [Guides: Add-Ons](http://facebook.github.io/react/docs/addons.html)
