@@ -414,7 +414,32 @@ Why can't we unify?
 
 ## [Guides: Add-Ons: Animation](http://facebook.github.io/react/docs/animation.html)
 
-__TODO__
++ Wrap components to animate in `ReactCSSTransitionGroup`.
++ `ReactCSSTransitionGroup` is based on, interface to, `ReactTransitions`.
++ All animated children should have `key` prop.
++ Components entering `ReactCSSTransitionGroup` get an `*-enter` class, and `*-enter-active` a tick later.
++ Class names are based on `transitionName` prop on `ReactCSSTransitionGroup`.
++ Use classes for CSS animation or transition.
++ `ReactCSSTransitionGroup` keeps elements on DOM until animation completes.
++ `ReactCSSTransitionGroup` must be mounted before animated items to work.
++ `ReactCSSTransitionGroup` can work with one or zero items.
++ Use `transitionEnter={false}` or `transitionLeave={false}` to disable transitions.
++ `ReactCSSTransitionGroup` provides no way to notify components. `ReactTransitionGroup` provides
+hooks for custom transitions.
++ `ReactTransitionGroup` provides the following lifecycle hooks:
+  + `componentWillEnter(callbacks)`
+    + Called same time as `componentDidMount` for components added to existing `TransitionGroup`.
+    + Blocks other animations until `callback` is called.
+    + Not called on initial render of `TransitionGroup`.
+  + `componentDidEnter()`
+    + Called after the `componentWillEnter` callback.
+  + `componentWillLeave(callback)`
+    + Called when child is removed from `ReactTransitionGroup`.
+    + Kept in DOM until `callback` is called.
+  + `componentDidLeave()`
+    + Called when `willLeave` callback is called, same time as `componentWillUnmount`.
++ `ReactTransitionGroup` renders as `span` by default. Pass string in `component` prop to override.
++ The `component` prop for `ReactTransitionGroup` can be any component.
 
 
 ## [Guides: Add-Ons: Two-Way Binding Helpers](http://facebook.github.io/react/docs/two-way-binding-helpers.html)
@@ -605,6 +630,7 @@ some point, but what else is happening?
 + How long have these addons been around and how long until they will be moved into core or utility lib?
 + How many lines of code are in react.js?
 + How many public, documented methods are in React api?
++ What is received by callbacks passed to `componentWillEnter` and `componentWillLeave` methods on `ReactTransitionGroup`?
 
 
 ## __TODO__ for these notes:
