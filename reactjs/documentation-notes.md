@@ -154,7 +154,26 @@ calling the callback.
 
 ## [Guides: Interactivity and Dynamic UIs](http://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
 
-__TODO__
++ Events handlers are passed as lowerCamelCase props.
++ React ensures that all events behave identically in IE8 and above.
++ React knows how to bubble and capture events according to the spec.
++ Events passed to your event handler are guaranteed to be consistent with W3C spec.
++ Enable touch events with `React.initializeTouchEvents(true);`.
++ Autobinding: `this` refers to component in all component methods.
++ Event delegation: listens for events at top level.
++ React thinks of UIs as simple state machines.
++ Update component state, React takes care of DOM.
++ `setState(data, callback)`: merges `data` into `this.state` and re-renders component. After render
+optional `callback` is called. Not sure when to use `callback`.
++ Most of the time use props. Sometimes (user input, server request, time) use state.
++ Minimize and isolate state to it's most logical place.
++ Pattern: stateless components, single stateful component above them, passing state to children as props.
++ Stateful component encapsulates interaction logic.
++ Stateless components take care of rendering.
++ Data changed by event handlers to trigger UI update goes in state.
++ Computed data and react components do not belong in state.
++ Generally, props don't belong it state.
++ Prop is source of truth. Store in state if you need to know previous prop value.
 
 
 ## [Guides: Multiple Components](http://facebook.github.io/react/docs/multiple-components.html)
@@ -386,6 +405,7 @@ some point, but what else is happening?
 + What can I do in React that I can't do in jQuery?
 + How does React compare to Polymer?
 + How does React help build "big, fast" web apps?
++ What is a "simple state machine"?
 
 
 ## __TODO__ for these notes:
