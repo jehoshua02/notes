@@ -218,7 +218,24 @@ components in small ways.
 
 ## [Guides: Transferring Props](http://facebook.github.io/react/docs/transferring-props.html)
 
-__TODO__
++ Unless you have good reason, explicitly passing props one by one (manual transfer).
++ When it gets fragile and tedious, use destructuring assignment and spread operator to extract the
+props you want and put the rest in an array: `var { checked, ...other} = this.props`.
++ Do your thing with your props, then pass the rest: `<div {...other} />`.
++ Be careful not to pass props by accident (It's good to avoid accidents in all code, even if they
+seem good).
++ Always use destructuring pattern when transferring unknown `other` props. Otherwise you might pass
+something you don't want to pass.
++ Repass used props explicitly.
++ Order of props matters. Last wins: good = `{...other} type="checkbox"`, bad = `type="checkbox" {...other}`.
++ I'm guessing "rest" means "gimme the rest", as in this destructuring expression:
+`var { x, y, ...other } = { x: 1, y: 2, a: 3, b: 4 }`.
++ And "spread" means "spread them out", like this: `<Bread {...butter} />`.
++ So it's the same operator `...props`, but it's called "rest" in destructing expression, but
+"spread" when being passed?
++ Rest, spread and destructuring are experimental JSX/ES7 features.
++ Requires `--harmony` flag with command-line tool to enable experimental ES7 syntax.
++ If not using JSX, you can use underscore `_.omit` and `_.extend` to destructure, rest, and spread.
 
 
 ## [Guides: Forms](http://facebook.github.io/react/docs/forms.html)
