@@ -497,7 +497,10 @@ hooks for custom transitions.
 
 ## [Guides: Add-Ons: Cloning Components](http://facebook.github.io/react/docs/clone-with-props.html)
 
-__TODO__
++ Use `cloneWithProps` to add props to a component that you don't own (`this.props.children`).
++ Use `cloneWithProps` to make copies of a component.
++ `cloneWithProps(component, extraProps)`.
++ Does not transfer `key` or `ref` to the cloned component. Add to `extraProps` object.
 
 
 ## [Guides: Add-Ons: Immutability Helpers](http://facebook.github.io/react/docs/update.html)
@@ -672,7 +675,7 @@ some point, but what else is happening?
 + What exactly should I pass to [`React.addons.TestUtils.mockComponent()`](http://facebook.github.io/react/docs/test-utils.html#mockcomponent)? What does `function componentClass` mean?
 + What exactly should I pass to [`React.addons.TestUtils.isElementOfType()`](http://facebook.github.io/react/docs/test-utils.html#iselementoftype)? What is a `ReactElement`?
 What is `function componentClass`?
-+
++ When would you want to make copies of a component (with `cloneWithProps`)?
 
 
 ## __TODO__ for these notes:
