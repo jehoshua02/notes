@@ -536,7 +536,14 @@ know deep data has changed.
 
 ## [Guides: Add-Ons: Performance Tools](http://facebook.github.io/react/docs/perf.html)
 
-__TODO__
++ For performance increase, use `shouldComponentUpdate` to affect React's diff algorithm.
++ Use ReactPerf to figure out where to use `shouldComponentUpdate`.
++ `Reacts.addons.Perf` methods:
+  + `start()` and `stop()`: Use to collect measurements.
+  + `printInclusive(measurements)`: Use to display measurements.
+  + `printExclusive(measurements)`: Excludes mount activities.
+  + `printDOM(measurements)`: Shows DOM manipulations.
+  + `getLastMeasurements()`: Raw json data for measurements.
 
 
 ## [Reference: Top-Level API](http://facebook.github.io/react/docs/top-level-api.html)
