@@ -505,7 +505,24 @@ hooks for custom transitions.
 
 ## [Guides: Add-Ons: Immutability Helpers](http://facebook.github.io/react/docs/update.html)
 
-__TODO__
++ Something about data, mutability, immutability, some `update()` helper that looks very strange to me.
++ I think you would use this in `shouldComponentUpdate()` to compare old data with new data. It's
+more performant than `deepCopy()`, and easier to maintain than selective replacement.
++ `newData update(oldData, commands)`:
+
+  ```javascript
+  var newData = React.addons.update(myData, {
+    x: {y: {z: {$set: 7}}},
+    a: {b: {$push: [9]}}
+  });
+  ```
++ Available commands:
+  + `{$push: array}`
+  + `{$unshift: array}`
+  + `{$splice: array of arrays}`
+  + `{$set: any}`
+  + `{$merge: object}`
+  + `{$apply: function}`
 
 
 ## [Guides: Add-Ons: PureRenderMixin](http://facebook.github.io/react/docs/pure-render-mixin.html)
@@ -676,6 +693,7 @@ some point, but what else is happening?
 + What exactly should I pass to [`React.addons.TestUtils.isElementOfType()`](http://facebook.github.io/react/docs/test-utils.html#iselementoftype)? What is a `ReactElement`?
 What is `function componentClass`?
 + When would you want to make copies of a component (with `cloneWithProps`)?
++ Can somebody help me make sense of what the `update()` addon does, when/why/where to use it?
 
 
 ## __TODO__ for these notes:
