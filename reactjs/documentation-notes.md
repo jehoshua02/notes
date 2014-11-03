@@ -527,7 +527,11 @@ more performant than `deepCopy()`, and easier to maintain than selective replace
 
 ## [Guides: Add-Ons: PureRenderMixin](http://facebook.github.io/react/docs/pure-render-mixin.html)
 
-__TODO__
++ Use `PureRenderMixin` for performance boost when component render function is "pure".
++ "pure" render function returns same result given the same props and state.
++ Only use with components having shallow, simple props and state, or use `forceUpdate()` when you
+know deep data has changed.
++ Child components should also be "pure".
 
 
 ## [Guides: Add-Ons: Performance Tools](http://facebook.github.io/react/docs/perf.html)
