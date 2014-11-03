@@ -466,7 +466,10 @@ hooks for custom transitions.
 
 ## [Guides: Add-Ons: Class Name Manipulation](http://facebook.github.io/react/docs/class-name-manipulation.html)
 
-__TODO__
++ Use `classSet()` to build DOM class string.
++ `classSet()` saves a lot of `if (condition) { classNames.push('someClass'); }`.
++ `React.addons.classSet({ 'someClass': condition, 'anotherClass': anotherCondition })`.
++ Receives hash object, class name as key, condition as value.
 
 
 ## [Guides: Add-Ons: Test Utilities](http://facebook.github.io/react/docs/test-utils.html)
