@@ -474,7 +474,25 @@ hooks for custom transitions.
 
 ## [Guides: Add-Ons: Test Utilities](http://facebook.github.io/react/docs/test-utils.html)
 
-__TODO__
++ Test utilities found in `React.addons.TestUtils`.
++ `React.addons.TestUtils` makes testing in any testing framework easy.
++ Facebook uses [Jest](http://facebook.github.io/jest/).
++ Utilities provided:
+  + `Simulate`
+  + `renderIntoDocument`
+  + `mockComponent`
+  + `isElementOfType`
+  + `isDOMComponent`
+  + `isCompositeComponent`
+  + `isCompositeComponentWithType`
+  + `isTextComponent`
+  + `findAllInRenderedTree`
+  + `scryRenderedDOMComponentsWithClass`
+  + `findRenderedDOMComponentWithClass`
+  + `scryRenderedDOMComponentsWithTag`
+  + `findRenderedDOMComponentWithTag`
+  + `scryRenderedComponentsWithType`
+  + `findRenderedComponentWithType`
 
 
 ## [Guides: Add-Ons: Cloning Components](http://facebook.github.io/react/docs/clone-with-props.html)
@@ -651,6 +669,10 @@ some point, but what else is happening?
 + How many lines of code are in react.js?
 + How many public, documented methods are in React api?
 + What is received by callbacks passed to `componentWillEnter` and `componentWillLeave` methods on `ReactTransitionGroup`?
++ What exactly should I pass to [`React.addons.TestUtils.mockComponent()`](http://facebook.github.io/react/docs/test-utils.html#mockcomponent)? What does `function componentClass` mean?
++ What exactly should I pass to [`React.addons.TestUtils.isElementOfType()`](http://facebook.github.io/react/docs/test-utils.html#iselementoftype)? What is a `ReactElement`?
+What is `function componentClass`?
++
 
 
 ## __TODO__ for these notes:
