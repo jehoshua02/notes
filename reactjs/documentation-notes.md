@@ -548,7 +548,21 @@ know deep data has changed.
 
 ## [Reference: Top-Level API](http://facebook.github.io/react/docs/top-level-api.html)
 
-__TODO__
++ `React`
+  + `React.createClass`
+  + `React.render`
+  + `React.unmountComponentAtNode`
+  + `React.renderToString`
+  + `React.renderToStaticMarkup`
+  + `React.isValidElement`
+  + `React.DOM`
+  + `React.PropTypes`
+  + `React.initializeTouchEvents`
+  + `React.Children`
+    + `React.Children.map`
+    + `React.Children.forEach`
+    + `React.Children.count`
+    + `React.Children.only`
 
 
 ## [Reference: Component API](http://facebook.github.io/react/docs/component-api.html)
@@ -705,6 +719,8 @@ some point, but what else is happening?
 What is `function componentClass`?
 + When would you want to make copies of a component (with `cloneWithProps`)?
 + Can somebody help me make sense of what the `update()` addon does, when/why/where to use it?
++ Will React DOM diff the initial content in the DOM element being rendered to?
++ What is a ReactElement and where do they come from?
 
 
 ## __TODO__ for these notes:
