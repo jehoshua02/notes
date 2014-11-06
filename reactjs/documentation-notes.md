@@ -660,7 +660,23 @@ know deep data has changed.
 
 ## [Reference: React (Virtual) DOM Terminology](http://facebook.github.io/react/docs/glossary.html)
 
-__TODO__
++ Five core types:
+  + `ReactElement`, `ReactElementFactory`.
+  + `ReactNode`
+  + `ReactComponent`, `ReactComponent` class.
++ `ReactElement` has no methods. Only `type`, `props`, `key`, `ref`.
++ You pass `ReactElement` to `React.render`.
++ `ReactElement` is not DOM element.
++ `ReactElement` is stateless, immutable, virtual DOM.
++ `React.createFactory` creates a function that creates `ReactElement` of specified `type`.
++ JSX is already shorthand for creating react elements. Don't need `React.createFactory`.
++ `ReactNode` can be `ReactElement`, `ReactText`, `ReactFragment`, represent children, tree of `ReactElements`.
++ `ReactComponent` Class is constructor for `ReactComponent` instance.
++ Constructor should return `ReactComponent` with `render` method.
++ Don't call `ReactComponent` constructor directly.
++ `ReactComponent` class is passed to `createElement` and returns `ReactElement`.
++ `React.render` will return the same, stateful `ReactComponent` instance, if called with same type and DOM element.
++ `render` method on `ReactComponent` returns `ReactElement`.
 
 
 ## [Flux: Overview](http://facebook.github.io/flux/docs/overview.html)
