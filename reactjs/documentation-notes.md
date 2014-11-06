@@ -582,7 +582,27 @@ know deep data has changed.
 
 ## [Reference: Component Specs and Lifecycle](http://facebook.github.io/react/docs/component-specs.html)
 
-__TODO__
++ `React.createClass()` takes a "specification" object that must have a `render` method.
++ `render` should examine `this.props` and `this.state` and return a single child component.
++ `render` can return `null` or `false`, renders `<noscript>`. `this.getDOMNode()` returns `null`.
++ `render` method should be "pure" (does not modify state, or interact with the DOM/browser).
++ keeping `render` pure makes server render more practical.
++ `getInitialState`: Once before mount. Initial value of `this.state`.
++ `getDefaultProps`: Called once and cached on class creation. Values set on `this.props` unless parent overrides.
++ Do not use `this.props` in `getDefaultProps`.
++ Any complex objects in `getDefaultProps` are shared across instances, not copied.
++ `propTypes`: Used to validate props being passed in.
++ `mixins`: Use to share behavior among multiple components.
++ `statics`: Can be called before instantiation. No access to props or state except through passing as function param.
++ `displayName`: Used in debugging messages. JSX sets automatically.
++ Lifecycle Methods:
+  + `componentWillMount`: Before initial rendering. `setState` will not trigger additional renders.
+  + `componentDidMount`: After initial rendering. Can use `this.getDOMNode()`, `setTimeout`, `setInterval`.
+  + `componentWillReceiveProps`: Invoked before receiving props. Not called for initial render. `setState` will not trigger additional render.
+  + `shouldComponentUpdate`: Before rendering, except initial or `forceUpdate`. Return `false` to skip update and render.
+  + `componentWillUpdate`: Before rendering, except initial. Prepare for update. Don't use `setState`.
+  + `componentDidUpdate`: After update, except initial. Operate on DOM.
+  + `componentWillUnmount`: Before unmounted from DOM. Cleanup timers, DOM, `componentDidMount`.
 
 
 ## [Reference: Supported Tags and Attributes](http://facebook.github.io/react/docs/tags-and-attributes.html)
