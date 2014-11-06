@@ -643,7 +643,19 @@ know deep data has changed.
 
 ## [Reference: Reconciliation](http://facebook.github.io/react/docs/reconciliation.html)
 
-__TODO__
++ Interesting explanation of DOM diffing algorithm.
++ O(n3) => O(n).
++ Pair-wise diff:
+  + Throw away tree if different type.
+  + DOM Nodes: remove, replace, update attributes and move on to children.
+  + Components: take all attributes from new and calls `component[Will|Did]ReceiveProps` on previous.
+    Call `render`. Diff the result.
++ List-wise diff:
+  + If someone says "Levenshtein", or "O(n2)" it must be complex.
+  + Keys! Only has to be unique to siblings.
++ Trade-Offs:
+  + Different component classes are not matched. Make same class if needed.
+  + Use stable keys.
 
 
 ## [Reference: React (Virtual) DOM Terminology](http://facebook.github.io/react/docs/glossary.html)
