@@ -619,7 +619,9 @@ know deep data has changed.
 
 ## [Reference: Event System](http://facebook.github.io/react/docs/events.html)
 
-__TODO__
++ Event handlers get `SyntheticEvent`.
++ `SyntheticEvent` is cross-browser wrapper around native event.
++ Refer to list of events and event properties.
 
 
 ## [Reference: DOM Differences](http://facebook.github.io/react/docs/dom-differences.html)
