@@ -636,7 +636,9 @@ know deep data has changed.
 
 ## [Reference: Special Non-DOM Attributes](http://facebook.github.io/react/docs/special-non-dom-attributes.html)
 
-__TODO__
++ `key`: unique identifier, prevents DOM removal.
++ `ref`.
++ `dangerouslySetInnerHTML`: takes object with `__html` key.
 
 
 ## [Reference: Reconciliation](http://facebook.github.io/react/docs/reconciliation.html)
