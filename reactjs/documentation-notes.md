@@ -567,7 +567,17 @@ know deep data has changed.
 
 ## [Reference: Component API](http://facebook.github.io/react/docs/component-api.html)
 
-__TODO__
++ Component instances are created when rendering and reused in subsequent renders.
++ Component instances accessed with `this` inside Component, `refs`, or `React.render` return value.
++ `setState`: Merges into state. Triggers UI updates. Callback after re-render.
++ Treat `this.state` as immutable. Use `setState`.
++ `setState` does not immediately mutate state.
++ `replaceState`: It's in the name.
++ `forceUpdate`: Use to trigger `render()`. Don't use.
++ `getDOMNode`: Available after mount. Native DOM element.
++ `isMounted`: It's in the name.
++ `setProps`: Only available on root-level (component returned by `React.render()`). Just call `React.render()` instead.
++ `replaceProps`: It's in the name.
 
 
 ## [Reference: Component Specs and Lifecycle](http://facebook.github.io/react/docs/component-specs.html)
