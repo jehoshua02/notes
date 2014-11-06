@@ -607,7 +607,14 @@ know deep data has changed.
 
 ## [Reference: Supported Tags and Attributes](http://facebook.github.io/react/docs/tags-and-attributes.html)
 
-__TODO__
++ Lots of HTML and SVG elements supported. Check the list if things aren't working as expected.
++ Check out [react-art](https://github.com/facebook/react-art). Renders to Canvas, SVG, or VML (IE8).
++ Lots of supported attributes. lowerCamelCase. `class` => `className`. `for` => `htmlFor`. Not working: check list.
++ Non-standard attributes: `autoCapitalize`, `autoCorrect` for Mobile Safari.
++ `property` for [Open Graph](http://ogp.me/) meta tags.
++ `itemProp`, `itemScope`, `itemType` for [HTML5 microdata](http://schema.org/docs/gs.html).
++ React-specific `dangerouslySetInnerHTML`.
++ Lots of SVG attributes. Check list if not working.
 
 
 ## [Reference: Event System](http://facebook.github.io/react/docs/events.html)
@@ -751,6 +758,9 @@ What is `function componentClass`?
 + Can somebody help me make sense of what the `update()` addon does, when/why/where to use it?
 + Will React DOM diff the initial content in the DOM element being rendered to?
 + What is a ReactElement and where do they come from?
++ Do `data-*` or `aria-*` attributes have to be lowerCamelCase?
++ What is [Open Graph](http://ogp.me/)?
++ What is [HTML5 microdata](http://schema.org/docs/gs.html)?
 
 
 ## __TODO__ for these notes:
