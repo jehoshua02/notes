@@ -626,7 +626,12 @@ know deep data has changed.
 
 ## [Reference: DOM Differences](http://facebook.github.io/react/docs/dom-differences.html)
 
-__TODO__
++ All DOM properties, attributes, handlers, lowerCamelCase.
++ `data-*` and `aria-*` are hyphen-lower.
++ `style` accepts object with lowerCamelCase props.
++ Events conform to W3C spec and bubble correctly.
++ `onChange` is what it says it is.
++ `value`, `checked`, `textarea`.
 
 
 ## [Reference: Special Non-DOM Attributes](http://facebook.github.io/react/docs/special-non-dom-attributes.html)
