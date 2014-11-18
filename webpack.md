@@ -343,4 +343,85 @@ Can make global: `library: "Foo", libraryTarget: "var"`.
 
 ## [GUIDES: Shimming modules](http://webpack.github.io/docs/shimming-modules.html)
 
+You can fix modules that have dependencies but don't require them with `imports-loader`.
+
+You can make a variable available to every module with `ProvidePlugin`.
+
+You can make a module export a value with `exports-loader`.
+
+You can fix broken module styles with `imports-loader`.
+
+You can add `<script>` tag with `script-loader`.
+
+You can use `expose-loader` to map exports to global vars.
+
+Watch the order: `expose!imports!exports`.
+
+
+## [GUIDES: Testing](http://webpack.github.io/docs/testing.html)
+
+In browser testing: more realistic test but more infrastructure and test time.
+DOM access.
+Node.js: no DOM access, faster test times.
+
+You can use `mocha-loader` to execute code with mocha and display test results.
+
+With `mocha-loader`, the `webpack-dev-server` will create test page.
+
+You can use karma.
+
+You can test in nod.js only if you use commonjs and no webpack specific stuff.
+
+But you can configure webpack for "node" target.
+
+
+## [GUIDES: Build performance](http://webpack.github.io/docs/build-performance.html)
+
+WIP.
+
+Incremental builds with webpack-dev-server, webpack-dev-middleware, webpack --watch,
+or `watch: true`.
+
+`prefetch`, `noParse`?
+
+There is an analysis tool.
+
+SourceMaps are slow? `devtool: "eval-source-map"`, `new UglifyJsPlugin({ sourceMap: false })`.
+
+
+## [GUIDES: Hot Module Replacement with webpack](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+
+HMR is experimental.
+
+Exchange modules in a running application. Update modules without full page
+reload (sounds inevitably messy).
+
+From App perspective:
+
+1. App code asks HMR runtime for updates.
+2. HMR runtime downloads updates and tells app code update is available.
+3. App code asks HMR to apply updates.
+4. HMR applies updates.
+5. App code may require user interaction?
+
+
+From webpack perspective:
+
+webpack compiler provides update: manifest and chunk(s).
+
+From module perspective:
+
+HMR is opt-in. Use handlers to deal with dependency or module updates. Update
+events bubble up.
+
+
+From HMR runtime perspective:
+
+...
+
+I'll come back and read this when/if we ever decide to use it.
+
+
+## [GUIDES: Comparison](http://webpack.github.io/docs/comparison.html)
+
 __TO BE CONTINUED__
