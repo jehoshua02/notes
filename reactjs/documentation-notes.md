@@ -661,9 +661,11 @@ know deep data has changed.
 ## [Reference: React (Virtual) DOM Terminology](http://facebook.github.io/react/docs/glossary.html)
 
 + Five core types:
-  + `ReactElement`, `ReactElementFactory`.
+  + `ReactElement`
+  + `ReactElement` Factory
   + `ReactNode`
-  + `ReactComponent`, `ReactComponent` class.
+  + `ReactComponent`
+  + `ReactComponent` Class
 + `ReactElement` has no methods. Only `type`, `props`, `key`, `ref`.
 + You pass `ReactElement` to `React.render`.
 + `ReactElement` is not DOM element.
