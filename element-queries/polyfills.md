@@ -45,3 +45,10 @@ window resize it still works as one would desire.
 
 Since [marcj/css-element-queries](https://github.com/marcj/css-element-queries)
 does not depend on Polymer, I'd go with that.
+
+
+## React
+
+With react components, I'd use [react-breakpoints-mixin][react-breakpoints-mixin].
+
+[react-breakpoints-mixin]: https://github.com/deseretdigital-ui/react-breakpoints-mixin
